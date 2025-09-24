@@ -1,0 +1,23 @@
+{
+    "name": "juan/inbotscr",
+    "description": "proyecto real para Inbotscr 4.0 en php mvc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Apple\\inbotscr\\": "src/",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "juanirco",
+            "email": "juanirco@hotmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "intervention/image": "^3.11"
+    }
+}

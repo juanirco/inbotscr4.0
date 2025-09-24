@@ -1,0 +1,28 @@
+{
+  "name": "inbotscr4.0-php-mvc",
+  "version": "1.0.0",
+  "description": "proyecto real php mvc para inbotscr4.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Juan",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^5.0.0",
+    "sass": "^1.92.1",
+    "terser": "^5.30.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "autoprefixer": "^10.4.21"
+  }
+}
