@@ -19,7 +19,7 @@ class AdminBlogController {
     
     // Obtener conexión a base de datos (hardcodeada)
     private static function getDbConnection() {
-        $db = new \mysqli('localhost', 'root', '', 'blog');
+        $db = new \mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_NAME']);
         
         if ($db->connect_error) {
             throw new \Exception("Connection failed: " . $db->connect_error);
@@ -60,7 +60,7 @@ class AdminBlogController {
         
         try {
             // Conexión hardcodeada como en BlogController
-            $db = new \mysqli('localhost', 'root', '', 'blog');
+            $db = new \mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_NAME']);
             
             if ($db->connect_error) {
                 echo json_encode(['success' => false, 'error' => 'Error de conexión']);
