@@ -17,7 +17,7 @@ class AdminBlogController {
         return isset($_SESSION['admin_authenticated']) && $_SESSION['admin_authenticated'] === true;
     }
     
-    // Obtener conexión a base de datos (hardcodeada)
+    // Obtener conexión a base de datos
     private static function getDbConnection() {
         $db = new \mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_NAME']);
         
@@ -29,7 +29,20 @@ class AdminBlogController {
         return $db;
     }
     
-    // Autenticar con usuario y contraseña desde BD
+    // NUEVO: Mostrar formulario de login (GET)
+    public static function showLogin(Router $router) {
+        // Si ya está autenticado, redirigir al admin
+        if (self::checkAuth()) {
+            header('Location: /admin/blog');
+            exit;
+        }
+        
+        $router->render('admin/blog/auth', [
+            'title' => 'Admin - Acceso'
+        ]);
+    }
+    
+    // Procesar autenticación (POST)
     public static function authenticate() {
         // IMPORTANTE: Limpiar cualquier output previo
         if (ob_get_level()) {
@@ -141,6 +154,7 @@ class AdminBlogController {
         }
     }
     
+    // Resto de métodos...
     public static function create(Router $router) {
         if (!self::checkAuth()) {
             header('Location: /admin/blog');
@@ -152,6 +166,8 @@ class AdminBlogController {
             'post' => null
         ]);
     }
+    
+    // ... resto de métodos igual que antes
     
     public static function edit(Router $router) {
         if (!self::checkAuth()) {
