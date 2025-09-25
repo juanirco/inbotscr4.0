@@ -17,14 +17,14 @@
     </noscript>
     <link rel="stylesheet" href="/../build/css/app.css">
     <!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7W1RVDXJ4"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7W1RVDXJ4"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-T7W1RVDXJ4');
-    </script> -->
+    </script>
 </head>
 <body>
 <div class="container_background">
