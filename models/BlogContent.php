@@ -101,7 +101,7 @@ class BlogContent {
 
     public function uploadImage($file, $post_id = null) {
         // SIMPLE: Guardar directamente en public/build/img/ para visualización inmediata
-        $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/build/img/';
+        $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/public/build/img/';
         
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
@@ -113,7 +113,7 @@ class BlogContent {
         if (move_uploaded_file($file['tmp_name'], $filepath)) {
             return [
                 'success' => true,
-                'url' => '/build/img/' . $filename,
+                'url' => '/public/build/img/' . $filename,
                 'filename' => $filename,
                 'filepath' => $filepath
             ];

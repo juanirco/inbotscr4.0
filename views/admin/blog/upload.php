@@ -60,10 +60,10 @@
             <div class="images-grid">
                 <?php foreach ($images as $image): ?>
                     <div class="image-item">
-                        <img src="/build/uploads/<?php echo $image['filename']; ?>" alt="<?php echo htmlspecialchars($image['original_name']); ?>">
+                        <img src="/build/img/<?php echo $image['filename']; ?>" alt="<?php echo htmlspecialchars($image['original_name']); ?>">
                         <div class="image-actions">
-                            <button type="button" class="btn-copy-url" data-url="/build/uploads/<?php echo $image['filename']; ?>">Copiar URL</button>
-                            <button type="button" class="btn-copy-markdown" data-markdown="![<?php echo htmlspecialchars($image['original_name']); ?>](/build/uploads/<?php echo $image['filename']; ?>)">Markdown</button>
+                            <button type="button" class="btn-copy-url" data-url="/build/img/<?php echo $image['filename']; ?>">Copiar URL</button>
+                            <button type="button" class="btn-copy-markdown" data-markdown="![<?php echo htmlspecialchars($image['original_name']); ?>](/build/img/<?php echo $image['filename']; ?>)">Markdown</button>
                         </div>
                         <small><?php echo htmlspecialchars($image['original_name']); ?></small>
                     </div>
