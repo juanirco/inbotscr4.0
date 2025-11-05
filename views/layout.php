@@ -1,6 +1,6 @@
 <?php
     // Cambie este valor en cada deploy importante para forzar recarga de CSS/JS
-    $ASSET_VERSION = '2025-11-05-1';
+    $ASSET_VERSION = '2025-11-05-2';
 ?>
 <!DOCTYPE html>
 <html lang="e">
